@@ -1,6 +1,7 @@
 # Actividad Obligatoria I — Simulaciones HTTP y MQTT + captura con Wireshark
 
 **Licenciatura en Ciberdefensa — Dispositivos Remotos e Internet de las Cosas (FADENA / UNDEF) — 2026**
+
 Autor: Gustavo Courault — Fork: `github.com/gcourault/iot_repo`
 
 ---
@@ -220,13 +221,13 @@ Hubo 5 publicaciones exitosas en ambos brokers y un *error de red simulado* con 
 ### 4.1 Broker local (`lo`) — 61 paquetes
 
 - **Stream 0 (`127.0.0.1:34350 → 8883`):**
-  - Secuencia `SYN, SYN/ACK, ACK, FIN`. Es la verificación `_broker_running()` de `sensor_er.py`, que abre y cierra el socket sin hablar TLS.
-  - Mosquitto contesta con **`TLS Alert (Fatal, Decode Error)`** y el cliente envía `RST`.
+    - Secuencia `SYN, SYN/ACK, ACK, FIN`. Es la verificación `_broker_running()` de `sensor_er.py`, que abre y cierra el socket sin hablar TLS.
+    - Mosquitto contesta con **`TLS Alert (Fatal, Decode Error)`** y el cliente envía `RST`.
 - **Conexiones reales:** `::1:46981 ↔ ::1:8883` y `::1:48069 ↔ ::1:8883` (IPv6 loopback, MAC en cero).
 - **Handshake:**
-  - **Client Hello** (en claro): **SNI = `localhost`**, versiones soportadas TLS 1.3 / 1.2 y 17 suites de cifrado ofrecidas.
-  - **Server Hello:** **TLS 1.3** con `TLS_AES_256_GCM_SHA384` (0x1302).
-  - En TLS 1.3 el certificado del servidor ya viaja cifrado, así que ni siquiera se ve.
+    - **Client Hello** (en claro): **SNI = `localhost`**, versiones soportadas TLS 1.3 / 1.2 y 17 suites de cifrado ofrecidas.
+    - **Server Hello:** **TLS 1.3** con `TLS_AES_256_GCM_SHA384` (0x1302).
+    - En TLS 1.3 el certificado del servidor ya viaja cifrado, así que ni siquiera se ve.
 - **Datos:** después del handshake todo son registros **`Application Data`** opacos. Un fragmento del volcado hexadecimal:
 
 ```
@@ -247,10 +248,10 @@ Hubo 5 publicaciones exitosas en ambos brokers y un *error de red simulado* con 
 - **Client Hello:** **SNI = `broker.hivemq.com`** visible en claro, ofrece TLS 1.3 y 1.2.
 - **Server Hello:** el servidor elige **TLS 1.2** con `TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256` (0xc02f).
 - **Certificado:** como es TLS 1.2, el mensaje *Certificate* **viaja en claro**. Wireshark muestra la cadena:
-  - Titular: `CN=mqttdashboard.com`
-  - Emisor: `Amazon RSA 2048 M04`
-  - Raíces: `Amazon Root CA 1` y `Starfield Services Root CA – G2`
-  - El cliente lo validó con los certificados del sistema.
+    - Titular: `CN=mqttdashboard.com`
+    - Emisor: `Amazon RSA 2048 M04`
+    - Raíces: `Amazon Root CA 1` y `Starfield Services Root CA – G2`
+    - El cliente lo validó con los certificados del sistema.
 - **Secuencia:** `Client Key Exchange, Change Cipher Spec, Encrypted Handshake Message` y a partir de ahí solo `Application Data`.
 - **Resultado:** 0 paquetes MQTT disecados y 0 apariciones de `SENSOR_ER` o `fadena/test` en crudo. No hubo retransmisiones.
 
@@ -259,6 +260,7 @@ Hubo 5 publicaciones exitosas en ambos brokers y un *error de red simulado* con 
 **No.** Tópico, Client ID y payload están cifrados. Sin las claves de sesión Wireshark no puede mostrarlos (se podrían descifrar exportando `SSLKEYLOGFILE` desde el cliente).
 
 Lo que **sí sigue expuesto** (metadatos):
+
 - IP y puertos, MAC en la LAN.
 - SNI con el nombre del broker.
 - En TLS 1.2, el certificado del servidor.
@@ -289,10 +291,10 @@ Lo que **sí sigue expuesto** (metadatos):
 - **Protocolos capturados:** HTTP/1.1 sobre TCP/8000, MQTT 3.1.1 sobre TCP/1883 (broker local y público) y MQTT sobre TLS en TCP/8883 (broker local con TLS 1.3 y broker público con TLS 1.2).
 - **¿Claro o cifrado?** HTTP y MQTT/1883 van **en texto plano**: método, URL, cabeceras, Client ID, tópico y valores del sensor son legibles directamente en Wireshark, incluso cuando el tráfico sale a Internet. Con TLS/8883 el contenido es **ilegible** (solo `Application Data`), aunque siguen expuestos metadatos como IP, puertos, SNI, tamaños y tiempos.
 - **Qué se vio en cada capa:**
-  - **Capa 7:** mensajes de aplicación (POST/200 OK; CONNECT/CONNACK/SUBSCRIBE/SUBACK/PUBLISH; handshake TLS).
-  - **Capa 4:** puertos efímeros del cliente hacia 8000/1883/8883, *3-way handshake*, PSH/ACK con datos, cierre FIN, RST ante un puerto sin servicio (IPv6 en HTTP), sin retransmisiones.
-  - **Capa 3:** 127.0.0.1/::1 para el tráfico interno y 192.168.1.24 ↔ IP públicas de AWS para el externo; TTL 64 de salida y 246 de llegada (~9 saltos).
-  - **Capa 2:** MAC nulas en loopback; en `eno1`, MAC de la PC → MAC del gateway (no la del servidor).
+    - **Capa 7:** mensajes de aplicación (POST/200 OK; CONNECT/CONNACK/SUBSCRIBE/SUBACK/PUBLISH; handshake TLS).
+    - **Capa 4:** puertos efímeros del cliente hacia 8000/1883/8883, *3-way handshake*, PSH/ACK con datos, cierre FIN, RST ante un puerto sin servicio (IPv6 en HTTP), sin retransmisiones.
+    - **Capa 3:** 127.0.0.1/::1 para el tráfico interno y 192.168.1.24 ↔ IP públicas de AWS para el externo; TTL 64 de salida y 246 de llegada (~9 saltos).
+    - **Capa 2:** MAC nulas en loopback; en `eno1`, MAC de la PC → MAC del gateway (no la del servidor).
 - **Eficiencia:** MQTT es mucho más liviano que HTTP para telemetría: 1 trama de 162–182 bytes contra 14 tramas y 1.361 bytes por lectura, gracias a la conexión persistente y a una cabecera fija de 2 bytes. Por eso se prefiere en IoT.
 - **Visión de ciberdefensa:** MQTT en 1883 contra un broker público y anónimo expone los datos del sensor a cualquiera en el camino y permite suscribirse o inyectar mensajes falsos en el tópico. Para uso real hace falta **TLS (8883) + autenticación (usuario/contraseña o certificado de cliente) + ACL por tópico**, y tener en cuenta que TLS no oculta los patrones de tráfico.
 
