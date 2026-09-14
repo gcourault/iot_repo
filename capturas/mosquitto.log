@@ -1,0 +1,23 @@
+1789397513: mosquitto version 2.0.11 starting
+1789397513: Config loaded from /home/gustavo/.mosquitto/mosquitto.conf.
+1789397513: Opening ipv4 listen socket on port 1883.
+1789397513: Opening ipv6 listen socket on port 1883.
+1789397513: Opening ipv4 listen socket on port 8883.
+1789397513: Opening ipv6 listen socket on port 8883.
+1789397513: mosquitto version 2.0.11 running
+1789397516: New connection from ::1:59527 on port 1883.
+1789397516: New client connected from ::1:59527 as lectura-mq-local (p2, c1, k60).
+1789397521: New connection from ::1:40385 on port 1883.
+1789397521: New client connected from ::1:40385 as sensor-mq-local (p2, c1, k60).
+1789397536: Client sensor-mq-local closed its connection.
+1789397538: Client lectura-mq-local closed its connection.
+1789397585: Client connection from 127.0.0.1 failed: error:0A000126:SSL routines::unexpected eof while reading.
+1789397585: New connection from ::1:46981 on port 8883.
+1789397585: New client connected from ::1:46981 as sensor-er-local-85102 (p2, c1, k60).
+1789397592: New connection from ::1:48069 on port 8883.
+1789397592: New client connected from ::1:48069 as lectura-er-local-85162 (p2, c1, k60).
+1789397614: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1789397614: Client lectura-er-local-85162 closed its connection.
+1789397616: OpenSSL Error[0]: error:0A000126:SSL routines::unexpected eof while reading
+1789397616: Client sensor-er-local-85102 closed its connection.
+1789397858: mosquitto version 2.0.11 terminating

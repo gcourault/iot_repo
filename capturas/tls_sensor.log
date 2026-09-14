@@ -1,0 +1,72 @@
+Broker Mosquitto TLS ya está corriendo.
+✓ Conectado a broker LOCAL localhost:8883
+✓ Conectado a broker REMOTO broker.hivemq.com:8883
+Iniciando sensor SENSOR_ER_01...
+[2026-09-14T11:53:09.388979] Generando dato: 27.24
+[LOCAL] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 27.24, "timestamp": "2026-09-14T11:53:09.388979"}
+[REMOTO] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 27.24, "timestamp": "2026-09-14T11:53:09.388979"}
+[2026-09-14T11:53:14.392098] Generando dato: 25.96
+[LOCAL] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 25.96, "timestamp": "2026-09-14T11:53:14.392098"}
+[REMOTO] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 25.96, "timestamp": "2026-09-14T11:53:14.392098"}
+[2026-09-14T11:53:19.396053] Generando dato: 27.71
+[LOCAL] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 27.71, "timestamp": "2026-09-14T11:53:19.396053"}
+[REMOTO] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 27.71, "timestamp": "2026-09-14T11:53:19.396053"}
+[2026-09-14T11:53:24.400023] Generando dato: 25.36
+[LOCAL] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 25.36, "timestamp": "2026-09-14T11:53:24.400023"}
+[REMOTO] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 25.36, "timestamp": "2026-09-14T11:53:24.400023"}
+[2026-09-14T11:53:29.404032] Generando dato: 26.38
+[LOCAL] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 26.38, "timestamp": "2026-09-14T11:53:29.404032"}
+[REMOTO] Publicado exitosamente: {"sensor_id": "SENSOR_ER_01", "valor": 26.38, "timestamp": "2026-09-14T11:53:29.404032"}
+[2026-09-14T11:53:34.408019] Generando dato: 22.9
+--- [SIMULACION] Generando error de red (Intento 1) ---
+Fallo intento 1 (Error de red simulado). Reintentando en 2s...
+
+Deteniendo sensor...
+Traceback (most recent call last):
+  File "/home/gustavo/iot_repo/sensor_er.py", line 148, in enviar_con_reintento
+    raise Exception("Error de red simulado")
+Exception: Error de red simulado
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/gustavo/iot_repo/sensor_er.py", line 190, in main
+    await enviar_con_reintento(datos)
+  File "/home/gustavo/iot_repo/sensor_er.py", line 170, in enviar_con_reintento
+    await asyncio.sleep(2)
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gustavo/iot_repo/sensor_er.py", line 198, in <module>
+    asyncio.run(main())
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gustavo/iot_repo/sensor_er.py", line 202, in <module>
+    client_local.loop_stop()
+  File "/home/gustavo/iot_repo/.venv/lib/python3.12/site-packages/paho/mqtt/client.py", line 2364, in loop_stop
+    self._thread.join()
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/threading.py", line 1149, in join
+    self._wait_for_tstate_lock()
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/threading.py", line 1169, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,33 @@
+Iniciando servidor de lectura para sensor_er en http://localhost:8002...
+Conectando a broker local: localhost:8883 (TLS)
+Conectando a broker remoto: broker.hivemq.com:8883 (TLS)
+INFO:     Started server process [85162]
+INFO:     Waiting for application startup.
+Clientes MQTT iniciados en segundo plano (local TLS + remoto TLS)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8002 (Press CTRL+C to quit)
+Conectado al broker LOCAL con código: Success
+Suscrito al tópico: fadena/test (local)
+Conectado al broker REMOTO con código: Success
+Suscrito al tópico: fadena/test (remoto)
+[LOCAL] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 25.96, "timestamp": "2026-09-14T11:53:14.392098"}
+[2026-09-14T11:53:14.392098] Procesado: sensor=SENSOR_ER_01, valor=25.96
+[REMOTO] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 25.96, "timestamp": "2026-09-14T11:53:14.392098"}
+[2026-09-14T11:53:14.392098] Procesado: sensor=SENSOR_ER_01, valor=25.96
+[LOCAL] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 27.71, "timestamp": "2026-09-14T11:53:19.396053"}
+[2026-09-14T11:53:19.396053] Procesado: sensor=SENSOR_ER_01, valor=27.71
+[REMOTO] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 27.71, "timestamp": "2026-09-14T11:53:19.396053"}
+[2026-09-14T11:53:19.396053] Procesado: sensor=SENSOR_ER_01, valor=27.71
+[LOCAL] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 25.36, "timestamp": "2026-09-14T11:53:24.400023"}
+[2026-09-14T11:53:24.400023] Procesado: sensor=SENSOR_ER_01, valor=25.36
+[REMOTO] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 25.36, "timestamp": "2026-09-14T11:53:24.400023"}
+[2026-09-14T11:53:24.400023] Procesado: sensor=SENSOR_ER_01, valor=25.36
+[LOCAL] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 26.38, "timestamp": "2026-09-14T11:53:29.404032"}
+[2026-09-14T11:53:29.404032] Procesado: sensor=SENSOR_ER_01, valor=26.38
+[REMOTO] Recibido en fadena/test: {"sensor_id": "SENSOR_ER_01", "valor": 26.38, "timestamp": "2026-09-14T11:53:29.404032"}
+[2026-09-14T11:53:29.404032] Procesado: sensor=SENSOR_ER_01, valor=26.38
+INFO:     127.0.0.1:53720 - "GET /telemetria/historial HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [85162]

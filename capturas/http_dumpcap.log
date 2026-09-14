@@ -1,0 +1,4 @@
+Capturing on 'Loopback: lo'
+File: capturas/http_lo.pcapng
+Packets captured: 96
+Packets received/dropped on interface 'Loopback: lo': 96/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

@@ -1,0 +1,20 @@
+INFO:     Started server process [83790]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+Recibido: sensor_id='S-001' valor=26.3
+INFO:     127.0.0.1:53620 - "POST /telemetria HTTP/1.1" 200 OK
+Recibido: sensor_id='S-001' valor=22.49
+INFO:     127.0.0.1:53630 - "POST /telemetria HTTP/1.1" 200 OK
+Recibido: sensor_id='S-001' valor=25.08
+INFO:     127.0.0.1:53642 - "POST /telemetria HTTP/1.1" 200 OK
+Recibido: sensor_id='S-001' valor=29.27
+INFO:     127.0.0.1:53656 - "POST /telemetria HTTP/1.1" 200 OK
+Recibido: sensor_id='S-001' valor=26.44
+INFO:     127.0.0.1:49748 - "POST /telemetria HTTP/1.1" 200 OK
+Recibido: sensor_id='S-001' valor=27.88
+INFO:     127.0.0.1:49756 - "POST /telemetria HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [83790]

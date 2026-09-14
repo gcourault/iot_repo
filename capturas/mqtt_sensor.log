@@ -1,0 +1,38 @@
+Conectando a broker local localhost:1883...
+✓ Conectado a localhost
+Conectando a broker remoto mqtt-dashboard.com:1883...
+✓ Conectado a mqtt-dashboard.com
+Iniciando publicación en tópico 'fadena/test'
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 27.31, "timestamp": "2026-09-14T11:52:02.237529"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 27.31, "timestamp": "2026-09-14T11:52:02.237529"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 26.04, "timestamp": "2026-09-14T11:52:04.237998"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 26.04, "timestamp": "2026-09-14T11:52:04.237998"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 24.32, "timestamp": "2026-09-14T11:52:06.238685"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 24.32, "timestamp": "2026-09-14T11:52:06.238685"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 19.05, "timestamp": "2026-09-14T11:52:08.239332"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 19.05, "timestamp": "2026-09-14T11:52:08.239332"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 25.22, "timestamp": "2026-09-14T11:52:10.239911"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 25.22, "timestamp": "2026-09-14T11:52:10.239911"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 23.6, "timestamp": "2026-09-14T11:52:12.240471"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 23.6, "timestamp": "2026-09-14T11:52:12.240471"}
+[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 21.29, "timestamp": "2026-09-14T11:52:14.241246"}
+[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 21.29, "timestamp": "2026-09-14T11:52:14.241246"}
+Deteniendo sensor...
+Traceback (most recent call last):
+  File "/home/gustavo/iot_repo/sensor_mq.py", line 78, in <module>
+    time.sleep(2)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gustavo/iot_repo/sensor_mq.py", line 83, in <module>
+    client_local.loop_stop()
+  File "/home/gustavo/iot_repo/.venv/lib/python3.12/site-packages/paho/mqtt/client.py", line 2364, in loop_stop
+    self._thread.join()
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/threading.py", line 1149, in join
+    self._wait_for_tstate_lock()
+  File "/home/gustavo/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/threading.py", line 1169, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

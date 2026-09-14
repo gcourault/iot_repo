@@ -1,0 +1,4 @@
+Capturing on 'eno1'
+File: capturas/tls_eno1.pcapng
+Packets captured: 56
+Packets received/dropped on interface 'eno1': 56/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

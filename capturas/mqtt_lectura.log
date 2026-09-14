@@ -1,0 +1,38 @@
+/home/gustavo/iot_repo/lectura_mq.py:87: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+Iniciando servidor de lectura MQTT en http://localhost:8001...
+Escuchando en broker local: localhost:1883
+Escuchando en broker remoto: mqtt-dashboard.com:1883
+INFO:     Started server process [84392]
+INFO:     Waiting for application startup.
+Clientes MQTT iniciados en segundo plano (local + remoto)Conectado al broker LOCAL con código: Success
+
+INFO:     Application startup complete.
+Suscrito al tópico: fadena/test (local)
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+Conectado al broker REMOTO con código: Success
+Suscrito al tópico: fadena/test (remoto)
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 27.31, "timestamp": "2026-09-14T11:52:02.237529"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 27.31, "timestamp": "2026-09-14T11:52:02.237529"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 26.04, "timestamp": "2026-09-14T11:52:04.237998"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 26.04, "timestamp": "2026-09-14T11:52:04.237998"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 24.32, "timestamp": "2026-09-14T11:52:06.238685"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 24.32, "timestamp": "2026-09-14T11:52:06.238685"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 19.05, "timestamp": "2026-09-14T11:52:08.239332"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 19.05, "timestamp": "2026-09-14T11:52:08.239332"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 25.22, "timestamp": "2026-09-14T11:52:10.239911"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 25.22, "timestamp": "2026-09-14T11:52:10.239911"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 23.6, "timestamp": "2026-09-14T11:52:12.240471"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 23.6, "timestamp": "2026-09-14T11:52:12.240471"}
+[LOCAL] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 21.29, "timestamp": "2026-09-14T11:52:14.241246"}
+[REMOTO] Recibido en fadena/test: {"sensor_id": "S-001", "valor": 21.29, "timestamp": "2026-09-14T11:52:14.241246"}
+INFO:     127.0.0.1:44102 - "GET /telemetria/historial HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84392]
