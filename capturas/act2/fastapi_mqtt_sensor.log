@@ -1,0 +1,10 @@
+Conectando a broker público broker.hivemq.com:1883 (client_id=sensor-act2-bridge)...
+✓ CONNACK de broker.hivemq.com:1883 → Success (session_present=False)
+  (CONNACK recibido en 0.48 s)
+Publicando en el tópico 'fadena/undef/gcourault/telemetria' con QoS 0 cada 2.0s
+Suscribite al mismo tópico desde el cliente web de HiveMQ para ver los mensajes.
+[001] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 21.01, "timestamp": "2026-09-21T09:41:10.636346"}
+[002] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 28.65, "timestamp": "2026-09-21T09:41:12.636757"}
+[003] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 20.35, "timestamp": "2026-09-21T09:41:14.637290"}
+⚠ Desconectado de broker.hivemq.com: Normal disconnection
+Total publicado: 3 mensajes

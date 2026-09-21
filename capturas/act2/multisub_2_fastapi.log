@@ -1,0 +1,18 @@
+INFO:     Started server process [2761594]
+INFO:     Waiting for application startup.
+[MQTT] Puente iniciado hacia broker.hivemq.com:1883
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[MQTT] Conectado a broker.hivemq.com:1883 → Success
+[MQTT] Suscrito a 'fadena/undef/gcourault/telemetria'
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 25.48, "timestamp": "2026-09-21T09:48:09.818034"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 19.91, "timestamp": "2026-09-21T09:48:11.818407"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 22.28, "timestamp": "2026-09-21T09:48:13.818947"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 19.38, "timestamp": "2026-09-21T09:48:15.819362"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 27.79, "timestamp": "2026-09-21T09:48:17.819781"}
+INFO:     127.0.0.1:41170 - "GET /eventos HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[MQTT] Desconectado de broker.hivemq.com: Normal disconnection (paho reintentará)
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2761594]

@@ -1,0 +1,13 @@
+CoAP Client started, sending to coap://localhost/temp
+Sending CoAP POST: {'temperature': 24.83, 'timestamp': '2026-09-21T09:42:44.789240'}
+Server response: 2.04 Changed - {"status": "received", "temp": 24.83}
+Sending CoAP POST: {'temperature': 26.58, 'timestamp': '2026-09-21T09:42:46.795290'}
+Server response: 2.04 Changed - {"status": "received", "temp": 26.58}
+Sending CoAP POST: {'temperature': 20.68, 'timestamp': '2026-09-21T09:42:48.799268'}
+Server response: 2.04 Changed - {"status": "received", "temp": 20.68}
+Sending CoAP POST: {'temperature': 24.06, 'timestamp': '2026-09-21T09:42:50.803263'}
+Server response: 2.04 Changed - {"status": "received", "temp": 24.06}
+Sending CoAP POST: {'temperature': 24.68, 'timestamp': '2026-09-21T09:42:52.807283'}
+Server response: 2.04 Changed - {"status": "received", "temp": 24.68}
+Sending CoAP POST: {'temperature': 25.37, 'timestamp': '2026-09-21T09:42:54.811269'}
+Server response: 2.04 Changed - {"status": "received", "temp": 25.37}

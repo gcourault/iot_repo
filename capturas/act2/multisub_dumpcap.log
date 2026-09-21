@@ -1,0 +1,4 @@
+Capturing on 'eno1'
+File: capturas/act2/multisub_eno1.pcapng
+Packets: 1 Packets: 13 Packets: 31 Packets: 32 Packets: 33 Packets: 37 Packets: 47 Packets: 55 Packets: 63 Packets: 71 Packets: 79 Packets: 81 Packets: 90 Packets: 97 Packets captured: 97
+Packets received/dropped on interface 'eno1': 97/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

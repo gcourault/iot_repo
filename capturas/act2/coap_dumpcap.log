@@ -1,0 +1,4 @@
+Capturing on 'Loopback: lo'
+File: capturas/act2/coap_lo.pcapng
+Packets: 2 Packets: 4 Packets: 6 Packets: 8 Packets: 10 Packets: 12 Packets: 26 Packets captured: 26
+Packets received/dropped on interface 'Loopback: lo': 26/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

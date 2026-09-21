@@ -1,0 +1,13 @@
+INFO:     Started server process [2759522]
+INFO:     Waiting for application startup.
+[MQTT] Puente iniciado hacia broker.hivemq.com:1883
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[MQTT] Conectado a broker.hivemq.com:1883 → Success
+[MQTT] Suscrito a 'fadena/undef/gcourault/telemetria'
+INFO:     127.0.0.1:43152 - "GET /coap/temp HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[MQTT] Desconectado de broker.hivemq.com: Normal disconnection (paho reintentará)
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2759522]

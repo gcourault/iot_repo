@@ -1,0 +1,10 @@
+Conectando como cliente web simulado (client_id=clientId-web-950938)...
+✓ Conectado por ws://broker.hivemq.com:8000/mqtt → Success
+✓ Subscribe a 'fadena/undef/gcourault/telemetria' (equivale al botón Subscribe del cliente web)
+[09:40:08.402] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 28.57, "timestamp": "2026-09-21T09:40:08.169151"}
+[09:40:10.402] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 22.95, "timestamp": "2026-09-21T09:40:10.169519"}
+[09:40:12.402] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 18.92, "timestamp": "2026-09-21T09:40:12.170037"}
+[09:40:14.403] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 24.06, "timestamp": "2026-09-21T09:40:14.170457"}
+[09:40:16.403] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 21.51, "timestamp": "2026-09-21T09:40:16.170921"}
+[09:40:18.404] fadena/undef/gcourault/telemetria (qos 0, 81 bytes): {"sensor_id": "S-001", "valor": 19.23, "timestamp": "2026-09-21T09:40:18.171350"}
+Total de mensajes recibidos por WebSocket: 6

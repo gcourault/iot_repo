@@ -1,0 +1,4 @@
+Capturing on 'eno1'
+File: capturas/act2/mqtt_ws_hivemq_eno1.pcapng
+Packets: 4 Packets: 10 Packets: 12 Packets: 14 Packets: 16 Packets: 18 Packets: 20 Packets: 22 Packets: 24 Packets: 30 Packets captured: 30
+Packets received/dropped on interface 'eno1': 30/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

@@ -165,9 +165,10 @@ El proyecto contiene múltiples pares de scripts sensor/lector para demostrar di
 | Protocolo | Sensor | Lector | Broker/Servidor | Puerto |
 |-----------|--------|--------|-----------------|--------|
 | **HTTP** | `sensor.py` | `lectura.py` | FastAPI local | 8000 |
-| **MQTT básico** | `sensor_mq.py` | `lectura_mq.py` | Mosquitto local | 1883 |
+| **MQTT básico** | `sensor_mq.py` | `lectura_mq.py` | `broker.hivemq.com` (público) | 1883 |
+| **MQTT sobre WebSocket** | `sensor_mq.py` | `hivemq_ws_client.py` | `broker.hivemq.com` (público) | 8000 |
 | **MQTT + errores** | `sensor_er.py` | `lectura_er.py` | Mosquitto local TLS | 8883 |
-| **WebSocket** | `ws_client.py` | `ws_server.py` | WebSocket local | 8000 |
+| **WebSocket** | `ws_client.py` | `ws_server.py` o `lectura.py` | WebSocket local | 8000 |
 | **CoAP** | `coap_client.py` | `coap_server.py` | CoAP local | 5683 (UDP) |
 | **ESP32 (Wokwi)** | `esp32_mqtt.py` | N/A | mqtt-dashboard.com | 1883 |
 
@@ -204,11 +205,25 @@ uv run python sensor.py
 
 ### MQTT (Message Queue Telemetry Transport)
 
-Estos scripts demuestran el protocolo MQTT publicando **simultáneamente en dos brokers**:
-- **Broker local:** `localhost:1883` (Mosquitto) → tráfico visible en interfaz `lo` de Wireshark
-- **Broker remoto:** `mqtt-dashboard.com:1883` → tráfico visible en interfaz de red (`wlan0`/`eth0`)
+Estos scripts publican contra el **bróker público `broker.hivemq.com:1883`** (Actividad
+Obligatoria 2): el tráfico sale a Internet y es visible en la interfaz de red (`eno1`/`wlan0`) de
+Wireshark, no en `lo`. No hace falta Mosquitto.
 
-Esto permite comparar tráfico local vs remoto en Wireshark.
+El bróker, el puerto y el tópico se configuran por variables de entorno, así que los mismos scripts
+sirven para un bróker local (Actividad 1):
+
+| Variable | Valor por defecto |
+|---|---|
+| `MQTT_BROKER` | `broker.hivemq.com` |
+| `MQTT_PORT` | `1883` |
+| `MQTT_TOPIC` | `fadena/undef/gcourault/telemetria` |
+| `SENSOR_COUNT` | `0` (publicar indefinidamente) |
+| `SENSOR_PERIOD` | `2` segundos |
+
+```bash
+# Contra un Mosquitto local, como en la Actividad 1
+MQTT_BROKER=localhost uv run python sensor_mq.py
+```
 
 **1. Primero - Suscriptor (Lectura):**
 ```bash
@@ -225,11 +240,44 @@ uv run python sensor_mq.py
 
 Verás en consola:
 ```
-[LOCAL] Publicado: {"sensor_id": "S-001", "valor": 25.3, ...}
-[REMOTO] Publicado: {"sensor_id": "S-001", "valor": 25.3, ...}
+✓ CONNACK de broker.hivemq.com:1883 → Success (session_present=False)
+  (CONNACK recibido en 0.46 s)
+[001] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 27.64, ...}
 ```
 
-> **Nota:** Mosquitto debe estar corriendo en `localhost:1883`. Si no está, inicialo con: `mosquitto -c ~/.mosquitto/mosquitto.conf`
+**3. Suscripción desde Internet (equivalente al cliente web de HiveMQ):**
+```bash
+uv run python hivemq_ws_client.py
+```
+Abre un WebSocket contra `ws://broker.hivemq.com:8000/mqtt` con subprotocolo `mqtt`, igual que hace
+la página <https://www.hivemq.com/demos/websocket-client/>. Para usar la página en lugar del script,
+configurá host `broker.hivemq.com`, puerto `8000`, path `/mqtt` y suscribite al mismo tópico.
+
+---
+
+### Servidor IoT unificado (`lectura.py`)
+
+`lectura.py` concentra los tres protocolos de la Actividad 2 en un solo proceso:
+
+```bash
+uv run uvicorn lectura:app --port 8000 --reload
+```
+
+| Endpoint | Protocolo | Qué hace |
+|---|---|---|
+| `POST /telemetria` | HTTP | recibe una lectura |
+| `WS /ws` | WebSocket | canal bidireccional; difunde **todos** los eventos |
+| `GET /coap/temp` | HTTP → CoAP | gateway hacia `coap_server.py` |
+| `GET /` | HTTP | panel en vivo por WebSocket |
+| `GET /estado`, `GET /eventos` | HTTP | estado y últimos 50 eventos |
+
+Además se suscribe al tópico MQTT en HiveMQ y reenvía por WebSocket lo que llega desde Internet.
+Para ver esa cadena completa:
+
+```bash
+uv run python ws_listener.py      # oyente del panel, en otra terminal
+uv run python sensor_mq.py        # publica hacia HiveMQ, en una tercera
+```
 
 ---
 

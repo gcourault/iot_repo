@@ -1,0 +1,14 @@
+Conectado a ws://localhost:8000/ws — esperando eventos difundidos por el servidor
+[09:40:52.194] origen=servidor   {"origen": "servidor", "mensaje": "conectado"}
+[09:40:54.195] origen=websocket  {"temperature": 23.11, "timestamp": "2026-09-21T09:40:54.194288"}
+[09:40:56.196] origen=websocket  {"temperature": 27.36, "timestamp": "2026-09-21T09:40:56.195269"}
+[09:40:58.199] origen=websocket  {"temperature": 27.63, "timestamp": "2026-09-21T09:40:58.198240"}
+[09:41:00.200] origen=websocket  {"temperature": 26.14, "timestamp": "2026-09-21T09:41:00.199276"}
+[09:41:02.203] origen=websocket  {"temperature": 21.17, "timestamp": "2026-09-21T09:41:02.202226"}
+[09:41:03.205] origen=http       {"sensor_id": "S-001", "valor": 20.82}
+[09:41:05.209] origen=http       {"sensor_id": "S-001", "valor": 26.91}
+[09:41:07.212] origen=http       {"sensor_id": "S-001", "valor": 25.05}
+[09:41:09.215] origen=http       {"sensor_id": "S-001", "valor": 25.45}
+[09:41:10.874] origen=mqtt       {"sensor_id": "S-001", "valor": 21.01, "timestamp": "2026-09-21T09:41:10.636346"}
+[09:41:12.874] origen=mqtt       {"sensor_id": "S-001", "valor": 28.65, "timestamp": "2026-09-21T09:41:12.636757"}
+[09:41:14.875] origen=mqtt       {"sensor_id": "S-001", "valor": 20.35, "timestamp": "2026-09-21T09:41:14.637290"}

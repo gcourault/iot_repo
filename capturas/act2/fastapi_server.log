@@ -1,0 +1,40 @@
+INFO:     Started server process [2758752]
+INFO:     Waiting for application startup.
+[MQTT] Puente iniciado hacia broker.hivemq.com:1883
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:44740 - "GET /estado HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44748 - "WebSocket /ws" [accepted]
+[WS] Cliente conectado: Address(host='127.0.0.1', port=44748) (total: 1)
+INFO:     connection open
+INFO:     127.0.0.1:44758 - "WebSocket /ws" [accepted]
+[WS] Cliente conectado: Address(host='127.0.0.1', port=44758) (total: 2)
+INFO:     connection open
+[WS] Recibido: {'temperature': 23.11, 'timestamp': '2026-09-21T09:40:54.194288'}
+[MQTT] Conectado a broker.hivemq.com:1883 → Success
+[MQTT] Suscrito a 'fadena/undef/gcourault/telemetria'
+[WS] Recibido: {'temperature': 27.36, 'timestamp': '2026-09-21T09:40:56.195269'}
+[WS] Recibido: {'temperature': 27.63, 'timestamp': '2026-09-21T09:40:58.198240'}
+[WS] Recibido: {'temperature': 26.14, 'timestamp': '2026-09-21T09:41:00.199276'}
+[WS] Recibido: {'temperature': 21.17, 'timestamp': '2026-09-21T09:41:02.202226'}
+[WS] Cliente desconectado: Address(host='127.0.0.1', port=44758) (total: 1)
+INFO:     connection closed
+[HTTP] Recibido: sensor_id='S-001' valor=20.82
+INFO:     127.0.0.1:44000 - "POST /telemetria HTTP/1.1" 200 OK
+[HTTP] Recibido: sensor_id='S-001' valor=26.91
+INFO:     127.0.0.1:44010 - "POST /telemetria HTTP/1.1" 200 OK
+[HTTP] Recibido: sensor_id='S-001' valor=25.05
+INFO:     127.0.0.1:44020 - "POST /telemetria HTTP/1.1" 200 OK
+[HTTP] Recibido: sensor_id='S-001' valor=25.45
+INFO:     127.0.0.1:44030 - "POST /telemetria HTTP/1.1" 200 OK
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 21.01, "timestamp": "2026-09-21T09:41:10.636346"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 28.65, "timestamp": "2026-09-21T09:41:12.636757"}
+[MQTT] fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 20.35, "timestamp": "2026-09-21T09:41:14.637290"}
+INFO:     127.0.0.1:45426 - "GET /eventos HTTP/1.1" 200 OK
+[WS] Cliente desconectado: Address(host='127.0.0.1', port=44748) (total: 0)
+INFO:     connection closed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+[MQTT] Desconectado de broker.hivemq.com: Normal disconnection (paho reintentará)
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2758752]

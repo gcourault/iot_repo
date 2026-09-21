@@ -1,0 +1,28 @@
+/home/gustavo/iot_repo/lectura_mq.py:80: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+Iniciando lector MQTT en http://localhost:8001 (broker broker.hivemq.com:1883, topic fadena/undef/gcourault/telemetria)
+INFO:     Started server process [2758291]
+INFO:     Waiting for application startup.
+Cliente MQTT iniciado en segundo plano
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+Conectado a broker.hivemq.com:1883 con código: Success
+Suscrito al tópico: fadena/undef/gcourault/telemetria
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 27.64, "timestamp": "2026-09-21T09:39:26.789487"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 27.55, "timestamp": "2026-09-21T09:39:28.789837"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 25.7, "timestamp": "2026-09-21T09:39:30.790278"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 20.8, "timestamp": "2026-09-21T09:39:32.790774"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 27.05, "timestamp": "2026-09-21T09:39:34.791228"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 18.37, "timestamp": "2026-09-21T09:39:36.791712"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 28.92, "timestamp": "2026-09-21T09:39:38.792132"}
+[HIVEMQ] Recibido en fadena/undef/gcourault/telemetria: {"sensor_id": "S-001", "valor": 29.18, "timestamp": "2026-09-21T09:39:40.792603"}
+INFO:     127.0.0.1:48140 - "GET /telemetria/historial HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2758291]

@@ -1,0 +1,15 @@
+Conectando a broker público broker.hivemq.com:1883 (client_id=sensor-act2)...
+✓ CONNACK de broker.hivemq.com:1883 → Success (session_present=False)
+  (CONNACK recibido en 0.46 s)
+Publicando en el tópico 'fadena/undef/gcourault/telemetria' con QoS 0 cada 2.0s
+Suscribite al mismo tópico desde el cliente web de HiveMQ para ver los mensajes.
+[001] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 27.64, "timestamp": "2026-09-21T09:39:26.789487"}
+[002] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 27.55, "timestamp": "2026-09-21T09:39:28.789837"}
+[003] Publicado en fadena/undef/gcourault/telemetria (80 bytes): {"sensor_id": "S-001", "valor": 25.7, "timestamp": "2026-09-21T09:39:30.790278"}
+[004] Publicado en fadena/undef/gcourault/telemetria (80 bytes): {"sensor_id": "S-001", "valor": 20.8, "timestamp": "2026-09-21T09:39:32.790774"}
+[005] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 27.05, "timestamp": "2026-09-21T09:39:34.791228"}
+[006] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 18.37, "timestamp": "2026-09-21T09:39:36.791712"}
+[007] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 28.92, "timestamp": "2026-09-21T09:39:38.792132"}
+[008] Publicado en fadena/undef/gcourault/telemetria (81 bytes): {"sensor_id": "S-001", "valor": 29.18, "timestamp": "2026-09-21T09:39:40.792603"}
+⚠ Desconectado de broker.hivemq.com: Normal disconnection
+Total publicado: 8 mensajes

@@ -1,0 +1,11 @@
+Connected to ws://localhost:8000/ws
+Sending: {'temperature': 23.11, 'timestamp': '2026-09-21T09:40:54.194288'}
+Server response: {"origen": "servidor", "mensaje": "conectado"}
+Sending: {'temperature': 27.36, 'timestamp': '2026-09-21T09:40:56.195269'}
+Server response: {"status": "ack", "origen": "websocket", "recibido": "2026-09-21T09:40:54.194737", "dato": {"temperature": 23.11, "timestamp": "2026-09-21T09:40:54.194288"}}
+Sending: {'temperature': 27.63, 'timestamp': '2026-09-21T09:40:58.198240'}
+Server response: {"origen": "websocket", "recibido": "2026-09-21T09:40:54.194737", "dato": {"temperature": 23.11, "timestamp": "2026-09-21T09:40:54.194288"}}
+Sending: {'temperature': 26.14, 'timestamp': '2026-09-21T09:41:00.199276'}
+Server response: {"status": "ack", "origen": "websocket", "recibido": "2026-09-21T09:40:56.195753", "dato": {"temperature": 27.36, "timestamp": "2026-09-21T09:40:56.195269"}}
+Sending: {'temperature': 21.17, 'timestamp': '2026-09-21T09:41:02.202226'}
+Server response: {"origen": "websocket", "recibido": "2026-09-21T09:40:56.195753", "dato": {"temperature": 27.36, "timestamp": "2026-09-21T09:40:56.195269"}}

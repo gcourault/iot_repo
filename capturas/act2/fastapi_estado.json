@@ -1,0 +1,1 @@
+{"mqtt":{"broker":"broker.hivemq.com","puerto":1883,"topic":"fadena/undef/gcourault/telemetria","client_id":"fastapi-bridge-5724","conectado":false},"websocket":{"clientes":0},"coap":{"uri":"coap://localhost/temp"},"eventos":0}
