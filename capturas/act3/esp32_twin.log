@@ -1,0 +1,19 @@
+Conectando a MQTT broker.hivemq.com:1883...
+✓ Conectado a MQTT broker.hivemq.com:1883 como esp32-dht22-twin-9312 → Success
+[09:51:11.483] Publicado #1 {"temp": 25.7, "hum": 60.2}
+[09:51:13.484] Publicado #2 {"temp": 25.9, "hum": 59.5}
+[09:51:15.485] Publicado #3 {"temp": 25.7, "hum": 59.1}
+[09:51:17.485] Publicado #4 {"temp": 25.5, "hum": 58.9}
+[09:51:19.486] Publicado #5 {"temp": 25.8, "hum": 59.2}
+[09:51:21.487] Publicado #6 {"temp": 25.6, "hum": 59.4}
+[09:51:23.487] Publicado #7 {"temp": 25.5, "hum": 59.6}
+[09:51:25.488] Publicado #8 {"temp": 25.6, "hum": 59.8}
+[09:51:27.488] Publicado #9 {"temp": 25.4, "hum": 60.4}
+[09:51:29.489] Publicado #10 {"temp": 25.6, "hum": 61.2}
+[09:51:31.489] Publicado #11 {"temp": 25.4, "hum": 60.8}
+[09:51:33.490] Publicado #12 {"temp": 25.2, "hum": 60.8}
+[09:51:35.490] Publicado #13 {"temp": 25.5, "hum": 61.1}
+[09:51:37.491] Publicado #14 {"temp": 25.6, "hum": 60.5}
+[09:51:39.491] Publicado #15 {"temp": 25.5, "hum": 60.5}
+✗ Desconectado (Normal disconnection) — paho reintenta solo
+Fin: 15 lecturas publicadas

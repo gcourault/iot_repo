@@ -1,0 +1,4 @@
+Capturing on 'eno1'
+File: capturas/act3/esp32_twin_eno1.pcapng
+Packets: 1 Packets: 8 Packets: 9 Packets: 10 Packets: 14 Packets: 19 Packets: 22 Packets: 31 Packets: 36 Packets: 41 Packets: 46 Packets: 51 Packets: 56 Packets: 61 Packets: 67 Packets: 71 Packets: 72 Packets: 83 Packets: 84 Packets: 93 Packets: 94 Packets: 103 Packets: 104 Packets: 113 Packets: 114 Packets: 123 Packets: 128 Packets: 133 Packets: 138 Packets: 143 Packets: 148 Packets: 153 Packets: 157 Packets: 162 Packets: 167 Packets: 177 Packets: 178 Packets: 181 Packets: 187 Packets: 191 Packets captured: 191
+Packets received/dropped on interface 'eno1': 191/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

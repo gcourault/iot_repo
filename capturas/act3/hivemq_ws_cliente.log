@@ -1,0 +1,49 @@
+Conectando como cliente web simulado (client_id=clientId-web-966370)...
+✓ Conectado por ws://broker.hivemq.com:8000/mqtt → Success
+✓ Subscribe a 'fadena/undef/gcourault/esp32/dht22/#' (equivale al botón Subscribe del cliente web)
+[09:51:11.714] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.7
+[09:51:11.937] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.7, "hum": 60.2}
+[09:51:11.937] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.2
+[09:51:13.715] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.9
+[09:51:13.937] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.5
+[09:51:13.938] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.9, "hum": 59.5}
+[09:51:15.716] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.7
+[09:51:15.938] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.7, "hum": 59.1}
+[09:51:15.938] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.1
+[09:51:17.717] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.5
+[09:51:17.943] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.5, "hum": 58.9}
+[09:51:17.944] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 58.9
+[09:51:19.717] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.8
+[09:51:19.940] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.2
+[09:51:19.940] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.8, "hum": 59.2}
+[09:51:21.718] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.6
+[09:51:21.940] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.6, "hum": 59.4}
+[09:51:21.940] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.4
+[09:51:23.718] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.5
+[09:51:23.982] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.6
+[09:51:23.983] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.5, "hum": 59.6}
+[09:51:25.719] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.6
+[09:51:25.941] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.6, "hum": 59.8}
+[09:51:25.941] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 59.8
+[09:51:27.719] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.4
+[09:51:27.941] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.4, "hum": 60.4}
+[09:51:27.942] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.4
+[09:51:29.720] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.6
+[09:51:29.942] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.6, "hum": 61.2}
+[09:51:29.943] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 61.2
+[09:51:31.721] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.4
+[09:51:31.942] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.4, "hum": 60.8}
+[09:51:31.943] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.8
+[09:51:33.721] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.2
+[09:51:33.944] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.2, "hum": 60.8}
+[09:51:33.944] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.8
+[09:51:35.721] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.5
+[09:51:35.944] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.5, "hum": 61.1}
+[09:51:35.944] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 61.1
+[09:51:37.722] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.6
+[09:51:37.986] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.6, "hum": 60.5}
+[09:51:37.987] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.5
+[09:51:39.723] fadena/undef/gcourault/esp32/dht22/temperatura (qos 0, 4 bytes): 25.5
+[09:51:39.944] fadena/undef/gcourault/esp32/dht22/json (qos 0, 27 bytes): {"temp": 25.5, "hum": 60.5}
+[09:51:39.945] fadena/undef/gcourault/esp32/dht22/humedad (qos 0, 4 bytes): 60.5
+Total de mensajes recibidos por WebSocket: 45
