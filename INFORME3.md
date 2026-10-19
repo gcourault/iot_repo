@@ -35,6 +35,7 @@ mezclaría con estos datos.
 | `capturas/act3/hivemq_ws_cliente.log` | Log del suscriptor MQTT sobre WebSocket (45 mensajes) |
 | `capturas/act3/Screenshot_20261019_101650.png` | Wokwi en ejecución |
 | `capturas/act3/Screenshot_20261019_102603.png` | Cliente web de HiveMQ recibiendo datos |
+| `capturas/act3/wireshark_mqtt_publish.png` | Wireshark mostrando los paquetes MQTT y el payload en claro |
 
 ### 1.2 Por qué un gemelo en Python para la captura
 
@@ -170,6 +171,12 @@ en la columna ASCII:
 00a0  22 74 65 6d 70 22 3a 20 32 35 2e 37 2c 20 22 68   "temp": 25.7, "h
 00b0  75 6d 22 3a 20 36 30 2e 32 7d                     um": 60.2}
 ```
+
+La misma trama en Wireshark, con el filtro `mqtt && tcp.port==1883`: en la lista se ven el CONNECT,
+el CONNACK, los PUBLISH a cada tópico y un PINGRESP; en el detalle, las cabeceras Ethernet, IPv4 y
+TCP (capas 2, 3 y 4) seguidas de los dos PUBLISH; y en el panel de bytes, el JSON en ASCII:
+
+![Wireshark: PUBLISH MQTT en texto plano (trama 24)](capturas/act3/wireshark_mqtt_publish.png)
 
 Se distinguen los campos del PUBLISH: `30 44` es la cabecera fija (tipo 3, longitud restante 68),
 `00 27` la longitud del tópico (39 bytes), luego el tópico y a continuación el JSON. Cualquiera que
